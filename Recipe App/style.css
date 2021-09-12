@@ -1,0 +1,235 @@
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: #E0EAFC;
+        /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC);
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #CFDEF3, #E0EAFC);
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+    }
+    
+    .wrapper {
+        background-color: white;
+        max-width: 400px;
+        border-radius: 5px;
+    }
+    
+    img {
+        max-width: 100%;
+    }
+    
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+    }
+    
+    input {
+        padding: 0.5rem 1rem;
+        border-radius: 3px;
+        border: 1px solid #a4bff3;
+        outline: none;
+        width: 100%;
+        font-size: 17px;
+        font-family: inherit;
+    }
+    
+    header {
+        position: relative;
+    }
+    
+    #search {
+        background-color: none;
+        position: absolute;
+        right: 2rem;
+        outline: none;
+        font-size: 17px;
+        color: #273027;
+        cursor: pointer;
+    }
+    
+    .fav-meals ul {
+        list-style-type: none;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-around;
+        padding: 0 1rem;
+        flex-wrap: wrap;
+    }
+    
+    .fav-meals li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        max-width: 100px;
+        position: relative;
+        cursor: pointer;
+    }
+    
+    .fav-meals li button {
+        position: absolute;
+        right: 1rem;
+        top: 10px;
+        opacity: 0;
+    }
+    
+    li:hover button {
+        opacity: 1;
+    }
+    
+    ul img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+    }
+    
+    .fav-meals {
+        padding: 0.5rem;
+    }
+    
+    .fav-meals h3,
+    .fav-meals span {
+        text-align: center;
+    }
+    
+    .fav-meals h3 {
+        font-size: 1.5rem;
+    }
+    
+    .fav-meals span {
+        font-size: 14px;
+        margin-top: 1rem;
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 75px;
+    }
+    
+    .meals {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .meal {
+        cursor: pointer;
+        position: relative;
+        margin: 0 1.5rem 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.12);
+    }
+    
+    .meal span {
+        font-weight: 600;
+        padding: 3px 12px;
+        position: absolute;
+        background: white;
+        left: 0;
+        top: 1rem;
+    }
+    
+    .meal-header {
+        max-width: 100%;
+        height: 250px;
+        display: flex;
+    }
+    
+    .meal-header img {
+        object-fit: cover;
+        object-position: top center;
+        flex-basis: 1;
+    }
+    
+    .meal .meal-body {
+        padding: .75rem 1rem;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    
+    .meal-body button {
+        font-size: 18px;
+    }
+    
+    .meal-body button.active {
+        color: rgb(184, 48, 48);
+    }
+    
+    button {
+        background: transparent;
+        outline: none;
+        border: none;
+        cursor: pointer;
+    }
+    
+    .popup-container {
+        background-color: rgba(0, 0, 0, 0.5);
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .popup {
+        max-height: 800px;
+        background-color: white;
+        border-radius: 5px;
+        padding: 1rem 2rem;
+        max-width: 400px;
+        width: 100%;
+        position: relative;
+        overflow: auto;
+    }
+    
+    .meal-info h2 {
+        text-align: center;
+        padding: 10px 0;
+    }
+    
+    .meal-info ul {
+        list-style-type: none;
+    }
+    
+    .popup button {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        font-size: 1.2rem;
+    }
+    
+    .popup-container.hidden {
+        opacity: 0;
+        pointer-events: none;
+    }
+    
+    .meal-info h3 {
+        padding: 1rem 0;
+    }
+    
+    .meal-info ul {
+        list-style-type: disc;
+        padding: 0.35rem 0 0 2rem;
+    }
